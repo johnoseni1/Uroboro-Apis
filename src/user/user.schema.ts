@@ -8,7 +8,9 @@ export const UserSchema = new mongoose.Schema<User>(
     password: {type: String, required: true, select: false},
     failedLoginAttempts: {type: Number, default: 0},
     disableReason: {type: String, default: ""},
-    
+    role: {type: String, default: "User"},
+    uuid: {type: String, require: false, unique: true},
+    metamaskAccountPublicKey:[{}]
     passwordResetToken: String,
     passwordResetExpires: Date,
     isActive: {type: Boolean, default: false},
