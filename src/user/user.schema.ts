@@ -11,7 +11,7 @@ export const UserSchema = new mongoose.Schema<User>(
     role: {type: String, default: "User"},
     uuid: {type: String, require: false, unique: true},
     metamaskAccountPublicKey:[{type: String}],
-    profilePic: {type: mongoose.Schema.Types.ObjectId, ref: "Avatar", default: "" },
+    profilePic: {type: mongoose.Schema.Types.ObjectId, ref: "Avatar", default: "6285e89838ad292dbc3cb0da" },
 
     passwordResetToken: String,
     passwordResetExpires: Date,
