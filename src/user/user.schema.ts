@@ -10,7 +10,8 @@ export const UserSchema = new mongoose.Schema<User>(
     disableReason: {type: String, default: ""},
     role: {type: String, default: "User"},
     uuid: {type: String, require: false, unique: true},
-    metamaskAccountPublicKey:[{}]
+    metamaskAccountPublicKey:[{type: String}],
+    profilePic: {type: mongoose.Schema.Types.ObjectId, ref: "Avatar" },
     passwordResetToken: String,
     passwordResetExpires: Date,
     isActive: {type: Boolean, default: false},
