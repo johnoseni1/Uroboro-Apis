@@ -49,7 +49,9 @@ export class AuthService {
     const user = await this.userService.create(
       userData.email,
       userData.password,
-      origin,
+      userData.metamaskAccountPublicKey,
+      
+      // origin,
     );
 
     return {

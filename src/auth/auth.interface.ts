@@ -28,6 +28,10 @@ export class SignUpDto {
   @ApiProperty({example: "password", minLength: 8})
   @MinLength(8)
   readonly password!: string;
+    
+  @ApiProperty({example: "Metamask publickey", maxLength: 255})
+  @MaxLength(255)
+  readonly metamaskAccountPublicKey !: string;
 }
 
 export class LoginDto {
@@ -39,6 +43,7 @@ export class LoginDto {
   @ApiProperty({example: "password", minLength: 8})
   @MinLength(8)
   readonly password!: string;
+
 }
 
 export class ForgottenPasswordDto {

@@ -29,6 +29,6 @@ export const UserSchema = new mongoose.Schema<User>(
  * Methods.
  */
 UserSchema.methods.getPublicData = function () {
-  const {id, email, isActive} = this;
-  return {id, email, isActive};
+  const {id, email, isActive, failedLoginAttempts, disableReason, role, uuid, metamaskAccountPublicKey, profilePic, accountSwap, status, emailVerified} = this;
+  return {id, email, isActive, failedLoginAttempts,disableReason,role, uuid, metamaskAccountPublicKey, profilePic, accountSwap, status,emailVerified };
 };
