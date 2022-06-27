@@ -14,10 +14,11 @@ export const UserSchema = new mongoose.Schema<User>(
     profilePic: {type: mongoose.Schema.Types.ObjectId, ref: "Avatar", default: "6285e89838ad292dbc3cb0da" },
     accountSwap: {type:Boolean , default:false },
     UpdatedPasswordTime: {type:Date},
-
     passwordResetToken: String,
     passwordResetExpires: Date,
+    status: {type: String, default: "Active"},
     isActive: {type: Boolean, default: false},
+    emailVerified: {type: Boolean, default: false},
     activationToken: String,
     activationExpires: Date,
   },
