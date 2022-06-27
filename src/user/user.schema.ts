@@ -6,6 +6,8 @@ export const UserSchema = new mongoose.Schema<User>(
   {
     email: {type: String, required: true, unique: true},
     password: {type: String, required: true, select: false},
+    failedLoginAttempts: {type: Number, default: 0},
+    disableReason
     passwordResetToken: String,
     passwordResetExpires: Date,
     isActive: {type: Boolean, default: false},
